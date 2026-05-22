@@ -1,0 +1,30 @@
+# Set default behavior to automatically normalize line endings.
+* text=auto eol=lf
+
+*.lock diff
+package-lock.json diff
+pnpm-lock.yaml diff
+yarn.lock diff
+
+*.js text
+*.ts text
+*.vue text
+*.css text
+*.html text
+*.json text
+*.md text
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.zip binary
+*.7z binary
+*.rar binary
+*.pdf binary
+
+dist/* linguist-generated
+build/* linguist-generated
+node_modules/* linguist-vendored
+*.min.js linguist-vendored
