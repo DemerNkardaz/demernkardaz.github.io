@@ -1,0 +1,35 @@
+name: Update Data
+on:
+  workflow_dispatch: # Ручной запуск
+  schedule:
+    - cron: "0 0 * * *" # Таймер: каждый день в 00:00
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@v5
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "24"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate JSON
+        run: npm run npm-data
+
+      - name: Push to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./public
+          force_orphan: false

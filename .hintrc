@@ -18,7 +18,8 @@
           "meta[name=theme-color]"
         ]
       }
-    ]
+    ],
+    "typescript-config/is-valid": "off"
   },
   "browserslist": [
     "defaults",

@@ -7,6 +7,8 @@ import vueDevTools from 'vite-plugin-vue-devtools';
 
 import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 
+import UnoCSS from 'unocss/vite';
+
 import AutoImport from './plugins/auto-import';
 import Components from './plugins/components';
 import svgLoader from './plugins/svg-loader';
@@ -22,6 +24,7 @@ export default defineConfig({
     svgLoader(),
     AutoImport(),
     Components(),
+    UnoCSS(),
     vueDevTools(),
     scssTokensPlugin(),
   ],

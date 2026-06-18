@@ -2,6 +2,7 @@ import { ref, type Ref } from 'vue';
 import { npmService } from '@/api/clients';
 import { SchemaValidationError } from '@/core/schema-validation';
 import { ApiError } from '@/core/http-client';
+import type { NpmSearchResult } from '@/services/npm.service';
 
 export interface NpmPackageSummary {
   name: string;
@@ -30,14 +31,30 @@ export function useNpmPackages(): UseNpmPackagesResult {
     isLoading.value = true;
     error.value = null;
 
-    try {
-      const result = await npmService.searchPackages(maintainer);
-
-      packages.value = result.objects.map(({ package: pkg }) => ({
-        name: pkg.name,
-        description: pkg.description ?? 'Без описания',
-        link: `https://www.npmjs.com/package/${pkg.name}`,
+    const setPackagesFromData = (data: NpmSearchResult) => {
+      packages.value = data.objects.map((item) => ({
+        name: item.package.name,
+        description: item.package.description ?? 'Без описания',
+        link: `https://www.npmjs.com/package/${item.package.name}`,
       }));
+    };
+
+    try {
+      if (!import.meta.env.PROD) {
+        try {
+          const result = await npmService.searchPackages(maintainer);
+          setPackagesFromData(result);
+          return; // Успешно
+        } catch (err) {
+          console.warn('API запрос не удался, пробуем fallback...', err);
+        }
+      }
+
+      const response = await fetch('/npm-data.json');
+      if (!response.ok) throw new Error('Static data not found');
+
+      const data = (await response.json()) as NpmSearchResult;
+      setPackagesFromData(data);
     } catch (err) {
       error.value = toUserMessage(err);
     } finally {
