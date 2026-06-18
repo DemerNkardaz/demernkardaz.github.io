@@ -3,14 +3,12 @@ import { HttpClient, NamespacedCache } from '../core/http-client';
 import { SchemaValidationError } from '@/core/schema-validation';
 
 const REGISTRY_BASE = 'https://registry.npmjs.org';
-const API_BASE = 'https://api.npmjs.org';
 
 /**
  * Схемы покрывают только поля, которые реально используются.
- * npm registry возвращает гораздо больше данных — .passthrough()
+ * npm registry возвращает гораздо больше данных — .loose()
  * пропускает остальное без ошибок валидации.
  */
-
 const NpmSearchResultSchema = z
   .object({
     objects: z.array(
@@ -23,32 +21,31 @@ const NpmSearchResultSchema = z
               description: z.string().optional(),
               date: z.string(),
             })
-            .passthrough(),
-          score: z.object({ final: z.number() }).passthrough(),
+            .loose(),
+          downloads: z
+            .object({
+              monthly: z.number(),
+              weekly: z.number(),
+            })
+            .optional(),
+          score: z.object({ final: z.number() }).loose(),
         })
-        .passthrough()
+        .loose()
     ),
     total: z.number(),
   })
-  .passthrough();
+  .loose();
 
 const NpmPackageSchema = z
   .object({
     name: z.string(),
     description: z.string().optional(),
-    'dist-tags': z.object({ latest: z.string() }).passthrough(),
+    'dist-tags': z.object({ latest: z.string() }).loose(),
     versions: z.record(z.string(), z.unknown()),
     time: z.record(z.string(), z.string()),
     maintainers: z.array(z.object({ name: z.string(), email: z.string().optional() })).optional(),
-  })
-  .passthrough();
-
-const NpmDownloadsSchema = z
-  .object({
-    downloads: z.number(),
-    start: z.string(),
-    end: z.string(),
-    package: z.string(),
+    keywords: z.array(z.string()).optional(),
+    downloads: z.object({ monthly: z.number() }).optional(),
   })
   .passthrough();
 
@@ -57,11 +54,10 @@ const NpmVersionsSchema = z
     name: z.string(),
     versions: z.record(z.string(), z.unknown()),
   })
-  .passthrough();
+  .loose();
 
 export type NpmSearchResult = z.infer<typeof NpmSearchResultSchema>;
 export type NpmPackage = z.infer<typeof NpmPackageSchema>;
-export type NpmDownloads = z.infer<typeof NpmDownloadsSchema>;
 export type NpmVersions = z.infer<typeof NpmVersionsSchema>;
 
 function validate<T>(schema: z.ZodType<T>, data: unknown, url: string): T {
@@ -109,46 +105,6 @@ export class NpmService {
     const url = `${REGISTRY_BASE}/${encodeURIComponent(name)}`;
     const raw = await this.http.getJson<unknown>(url);
     const data = validate(NpmPackageSchema, raw, url);
-
-    this.cache.set(key, data);
-    return data;
-  }
-
-  async getDownloads(name: string): Promise<NpmDownloads> {
-    const key = `downloads:last-month:${name}`;
-    const cached = this.cache.get<NpmDownloads>(key);
-    if (cached) return cached;
-
-    const url = `${API_BASE}/downloads/point/last-month/${encodeURIComponent(name)}`;
-    const raw = await this.http.getJson<unknown>(url);
-    const data = validate(NpmDownloadsSchema, raw, url);
-
-    // Загрузки за месяц меняются чаще метаданных пакета — короче TTL.
-    this.cache.set(key, data, 15 * 60 * 1000);
-    return data;
-  }
-
-  async getDownloadsRange(name: string, from: string, to: string): Promise<NpmDownloads> {
-    const key = `downloads:${from}:${to}:${name}`;
-    const cached = this.cache.get<NpmDownloads>(key);
-    if (cached) return cached;
-
-    const url = `${API_BASE}/downloads/point/${from}:${to}/${encodeURIComponent(name)}`;
-    const raw = await this.http.getJson<unknown>(url);
-    const data = validate(NpmDownloadsSchema, raw, url);
-
-    this.cache.set(key, data);
-    return data;
-  }
-
-  async getVersions(name: string): Promise<NpmVersions> {
-    const key = `versions:${name}`;
-    const cached = this.cache.get<NpmVersions>(key);
-    if (cached) return cached;
-
-    const url = `${REGISTRY_BASE}/${encodeURIComponent(name)}/versions`;
-    const raw = await this.http.getJson<unknown>(url);
-    const data = validate(NpmVersionsSchema, raw, url);
 
     this.cache.set(key, data);
     return data;

@@ -7,6 +7,10 @@ import type { NpmSearchResult } from '@/services/npm.service';
 export interface NpmPackageSummary {
   name: string;
   description: string;
+  version: string;
+  downloads: number;
+  updated: string;
+  keywords: string[];
   link: string;
 }
 
@@ -32,11 +36,21 @@ export function useNpmPackages(): UseNpmPackagesResult {
     error.value = null;
 
     const setPackagesFromData = (data: NpmSearchResult) => {
-      packages.value = data.objects.map((item) => ({
-        name: item.package.name,
-        description: item.package.description ?? 'Без описания',
-        link: `https://www.npmjs.com/package/${item.package.name}`,
-      }));
+      packages.value = data.objects.map((item) => {
+        console.log('Package data:', item.package);
+        const pkg = item.package;
+        const downloads = item.downloads?.monthly ?? 0;
+
+        return {
+          name: pkg.name ?? '',
+          description: pkg.description ?? 'Без описания',
+          version: pkg.version ?? '0.0.0',
+          downloads: downloads,
+          updated: pkg.date ? new Date(pkg.date).toISOString() : '',
+          keywords: Array.isArray(pkg.keywords) ? pkg.keywords : [],
+          link: `https://www.npmjs.com/package/${pkg.name}`,
+        };
+      });
     };
 
     try {

@@ -12,5 +12,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     NpmPackageList: typeof import('./../components/integrations/NpmPackageList.vue')['default']
+    PackageTags: typeof import('./../components/ui/PackageTags.vue')['default']
   }
 }
