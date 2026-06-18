@@ -15,7 +15,8 @@
 	"dependencies": {
 		"@vueuse/core": "^14.3.0",
 		"vue": "^3.5.32",
-		"vue-i18n": "^11.4.4"
+		"vue-i18n": "^11.4.4",
+		"zod": "^4.4.3"
 	},
 	"devDependencies": {
 		"@intlify/unplugin-vue-i18n": "^11.2.3",

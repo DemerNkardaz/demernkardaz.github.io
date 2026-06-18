@@ -5,13 +5,13 @@ import { fileURLToPath } from 'node:url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const distPath = path.join(__dirname, 'dist', 'gh');
+const distPath = path.join(__dirname, 'dist');
 
 ghpages.publish(
 	distPath,
 	{
 		branch: 'gh-pages',
-		repo: 'https://github.com/DemerNkardaz/Social.git',
+		repo: 'https://github.com/DemerNkardaz/demernkardaz.github.io.git',
 		clean: true,
 		message: 'deploy: update gh-pages',
 		dotfiles: true,

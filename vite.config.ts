@@ -14,55 +14,55 @@ import scssTokensPlugin from './plugins/vite-plugin-scss-tokens';
 
 // https://vite.dev/config/
 export default defineConfig({
-	plugins: [
-		vue(),
-		VueI18nPlugin({
-			include: [path.resolve(__dirname, './src/locales/**')],
-		}),
-		svgLoader(),
-		AutoImport(),
-		Components(),
-		vueDevTools(),
-		scssTokensPlugin(),
-	],
-	resolve: {
-		alias: {
-			'@': fileURLToPath(new URL('./src', import.meta.url)),
-		},
-	},
-	build: {
-		target: 'esnext',
-		minify: 'terser',
-		terserOptions: {
-			compress: {
-				drop_console: true,
-				drop_debugger: true,
-			},
-			format: {
-				comments: false,
-			},
-		},
-		rollupOptions: {
-			output: {
-				manualChunks(id) {
-					if (id.includes('node_modules')) {
-						if (id.includes('vue') || id.includes('pinia')) return 'vue';
-						return 'vendor';
-					}
-				},
-			},
-		},
-	},
-	css: {
-		preprocessorOptions: {
-			scss: {
-				additionalData: `
+  plugins: [
+    vue(),
+    VueI18nPlugin({
+      include: [path.resolve(__dirname, './src/locales/**')],
+    }),
+    svgLoader(),
+    AutoImport(),
+    Components(),
+    vueDevTools(),
+    scssTokensPlugin(),
+  ],
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  build: {
+    target: 'esnext',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      },
+      format: {
+        comments: false,
+      },
+    },
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          if (id.includes('node_modules')) {
+            if (id.includes('vue') || id.includes('pinia')) return 'vue';
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `
 					@use "@/styles/tokens" as *;
 					@use "@/styles/constants" as *;
 					@use "@/styles/functions" as *;
 					@use "@/styles/mixins" as *;
 				`,
-			},
-		},
-	},
+      },
+    },
+  },
 });
