@@ -1,4 +1,8 @@
 .package-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
   display: flex;
   flex-direction: column;
   gap: 1em;
@@ -12,12 +16,42 @@
     border-radius: 0.5em;
     padding: 0.5em;
   }
+
+  &__item {
+    margin-bottom: 1rem;
+
+    &__header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    &__description {
+      margin: 0.5rem 0;
+    }
+  }
+
+  &__badge__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.25em;
+  }
 }
 
 .package-tag {
   border: 1px solid grey;
   border-radius: 0.5em;
-  padding: 0.5em;
+  padding: 0.25em;
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-decoration: none;
 
   &__wrapper {
     display: flex;
