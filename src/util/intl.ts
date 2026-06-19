@@ -21,3 +21,34 @@ export function formatDate(date: Date | string): string {
 export function formatNumber(number: number): string {
   return new Intl.NumberFormat(locale).format(number);
 }
+
+export function formatDuration(seconds: number): string {
+  const h = Math.floor(seconds / 3600);
+  const m = Math.floor((seconds % 3600) / 60);
+  const s = seconds % 60;
+
+  return [
+    h &&
+      new Intl.NumberFormat(locale, {
+        style: 'unit',
+        unit: 'hour',
+        unitDisplay: 'short',
+      }).format(h),
+
+    m &&
+      new Intl.NumberFormat(locale, {
+        style: 'unit',
+        unit: 'minute',
+        unitDisplay: 'short',
+      }).format(m),
+
+    s &&
+      new Intl.NumberFormat(locale, {
+        style: 'unit',
+        unit: 'second',
+        unitDisplay: 'short',
+      }).format(s),
+  ]
+    .filter(Boolean)
+    .join(' ');
+}

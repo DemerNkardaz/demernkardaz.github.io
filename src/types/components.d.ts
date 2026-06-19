@@ -14,5 +14,6 @@ declare module 'vue' {
     NpmPackageList: typeof import('./../components/integrations/NpmPackageList.vue')['default']
     PackageTags: typeof import('./../components/ui/PackageTags.vue')['default']
     StaticBadge: typeof import('./../components/ui/StaticBadge.vue')['default']
+    WakatimeCodeStats: typeof import('./../components/integrations/WakatimeCodeStats.vue')['default']
   }
 }

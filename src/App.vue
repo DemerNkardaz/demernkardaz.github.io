@@ -9,6 +9,7 @@
 
   NPM Packages:
   <NpmPackageList maintainer="nkardaz" />
+  <WakatimeCodeStats />
 </template>
 
 <style scoped></style>

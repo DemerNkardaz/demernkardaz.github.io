@@ -11,7 +11,9 @@
     "type-check": "vue-tsc --build",
     "deploy": "node deploy.js",
     "open": "start http://localhost:5173",
-    "npm-data": "npx tsx --tsconfig tsconfig.node.json scripts/generate-npm-data.mts"
+    "npm-data": "npx tsx --tsconfig tsconfig.node.json scripts/generate-npm-data.mts",
+    "wakatime-data": "npx tsx --tsconfig tsconfig.node.json scripts/generate-wakatime-data.mts",
+    "generate-data": "npm run npm-data && npm run wakatime-data"
   },
   "dependencies": {
     "@vueuse/core": "^14.3.0",
@@ -22,7 +24,7 @@
   "devDependencies": {
     "@intlify/unplugin-vue-i18n": "^11.2.4",
     "@tsconfig/node24": "^24.0.4",
-    "@types/node": "^25.9.3",
+    "@types/node": "^26.0.0",
     "@vitejs/plugin-vue": "^6.0.7",
     "@vue/tsconfig": "^0.9.1",
     "gh-pages": "^6.3.0",
@@ -30,7 +32,7 @@
     "sass": "^1.101.0",
     "terser": "^5.48.0",
     "tsx": "^4.22.4",
-    "typescript": "~6.0.3",
+    "typescript": "^6.0.3",
     "unocss": "^66.7.2",
     "unplugin-auto-import": "^21.0.0",
     "unplugin-vue-components": "^32.1.0",

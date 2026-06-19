@@ -1,9 +1,6 @@
 import { computed, ref, shallowRef, watch, onBeforeUnmount, toValue } from 'vue';
 import type { MaybeRefOrGetter } from 'vue';
 
-// Требует Vue >= 3.3 (toValue). Если у вас более старая версия —
-// замените toValue(source) на unref(source) и используйте только ref/computed.
-
 export type BadgeFormat = 'svg' | 'json';
 export type BadgeStyleName = 'plastic' | 'flat' | 'flat-square' | 'for-the-badge' | 'social';
 
@@ -21,16 +18,9 @@ export interface StaticBadgeOptions {
 }
 
 export interface UseStaticBadgeConfig {
-  /** Запускать фетч автоматически при изменении опций. По умолчанию true. */
   immediate?: boolean;
-  /** Использовать модульный кэш по URL. По умолчанию true. */
   cache?: boolean;
-  /**
-   * Сколько мс держать запись в локальном кэше.
-   * Если не указано — берётся cacheSeconds из опций (× 1000), иначе 60000.
-   */
   cacheTtl?: number;
-  /** Задержка дебаунса перед запросом при смене опций, мс. По умолчанию 120. */
   debounce?: number;
 }
 
@@ -44,14 +34,9 @@ interface CacheEntry {
   expiresAt: number;
 }
 
-// Модульный кэш — общий для ВСЕХ инстансов composable на странице.
-// Два бейджа с одинаковым итоговым URL (одинаковые label/message/color/...)
-// возьмут результат друг у друга, в том числе если запросы выполняются
-// параллельно (дедуп через `inflight`).
 const cache = new Map<string, CacheEntry>();
 const inflight = new Map<string, Promise<BadgeResult>>();
 
-/** Собирает URL для https://img.shields.io/static/v1 из опций бейджа. */
 export function buildStaticBadgeUrl(options: StaticBadgeOptions): string {
   const params = new URLSearchParams();
   if (options.label) params.set('label', options.label);
@@ -88,7 +73,6 @@ async function requestBadge(url: string, format: BadgeFormat): Promise<BadgeResu
   return { svg: text, json: null };
 }
 
-/** Сбросить весь локальный кэш бейджей (например, после смены темы/палитры). */
 export function clearStaticBadgeCache(): void {
   cache.clear();
   inflight.clear();
@@ -96,24 +80,6 @@ export function clearStaticBadgeCache(): void {
 
 let svgIdCounter = 0;
 
-/**
- * Делает все `id` внутри SVG уникальными (добавляя суффикс) и поправляет
- * все ссылки на них (`url(#id)`, `href="#id"`, `xlink:href="#id"`).
- *
- * Зачем: shields.io генерирует SVG с фиксированными id (`id="s"` у
- * градиента, `id="r"` у clip-path) одинаковыми для ЛЮБОГО бейджа.
- * Если на странице несколько бейджей вставлены через v-html "как есть",
- * у всех будет один и тот же id="r"/id="s" — а ссылка `url(#r)` в SVG
- * резолвится в рамках всего документа, поэтому второй, третий и т.д.
- * бейдж может взять clip-path/градиент ПЕРВОГО бейджа на странице.
- * Внешне это выглядит так, будто бейдж "не растягивается под текст" —
- * на самом деле его обрезает чужой clipPath с чужой (меньшей) шириной.
- *
- * Вызывать нужно НЕ на этапе фетча/кэша (иначе два инстанса, которые
- * получат одну и ту же закэшированную строку, унаследуют один и тот же
- * "уникальный" id и снова столкнутся), а на этапе рендера — с суффиксом,
- * уникальным для конкретного DOM-инстанса бейджа.
- */
 export function scopeSvgIds(svgMarkup: string, suffix?: string): string {
   if (!svgMarkup || typeof DOMParser === 'undefined') return svgMarkup;
 
@@ -234,9 +200,7 @@ export function useStaticBadge(
   function scheduleFetch() {
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
-      fetchBadge().catch(() => {
-        // ошибка уже отражена в error.value — здесь просто гасим unhandled rejection
-      });
+      fetchBadge().catch(() => {});
     }, debounce);
   }
 

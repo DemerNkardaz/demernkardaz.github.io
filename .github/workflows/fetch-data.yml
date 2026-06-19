@@ -26,8 +26,9 @@ jobs:
 
       - name: Generate JSON
         run: |
-          npm run npm-data
+          npm run generate-data
           cp public/npm-data.json dist/npm-data.json
+          cp public/wakatime-data.json dist/wakatime-data.json
 
       - name: Push to gh-pages
         uses: peaceiris/actions-gh-pages@v4

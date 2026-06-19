@@ -1,8 +1,3 @@
-/**
- * Унифицированная ошибка для всех HTTP-запросов к внешним API.
- * Позволяет вызывающему коду различать типы сбоев (404 vs 500 vs network)
- * и принимать решения (retry, fallback, показать пользователю) без парсинга строк.
- */
 export class ApiError extends Error {
   constructor(
     message: string,
@@ -36,23 +31,11 @@ export class ApiError extends Error {
 }
 
 export interface HttpClientOptions {
-  /** Базовые заголовки, добавляемые к каждому запросу (например, Authorization, User-Agent). */
   headers?: Record<string, string>;
-  /** Максимум попыток при retryable-ошибках (429, 5xx, network). По умолчанию 3. */
   maxRetries?: number;
-  /** Базовая задержка для экспоненциального backoff, мс. По умолчанию 500. */
   retryBaseDelayMs?: number;
 }
 
-/**
- * Тонкая обёртка над fetch с единообразной обработкой ошибок,
- * автоматическим retry для временных сбоев и поддержкой
- * rate-limit заголовков (Retry-After, X-RateLimit-Reset).
- *
- * Один экземпляр HttpClient = одна "платформа" (свои базовые заголовки,
- * свой токен). Сервисы получают HttpClient через конструктор, а не
- * через наследование — это позволяет легко подменить его в тестах.
- */
 export class HttpClient {
   private readonly headers: Record<string, string>;
   private readonly maxRetries: number;
@@ -151,11 +134,6 @@ export class HttpClient {
   }
 }
 
-/**
- * Кэш в памяти с TTL и поддержкой неймспейсов (по умолчанию 1 час).
- * Каждый сервис использует NamespacedCache со своим префиксом,
- * чтобы избежать коллизий ключей между платформами (npm vs github).
- */
 interface CacheEntry<T> {
   value: T;
   expiresAt: number;
