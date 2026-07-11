@@ -1,0 +1,198 @@
+{
+  categories: {
+    items: ['2d', '3d', 'writing', 'typography', 'code', 'security', 'services', 'photo', 'languages', 'various', 'memories'],
+    locale: {
+      en: {
+        art2d: '2D Art & Graphics',
+        art3d: '3D Modeling',
+        writing: 'Writing & Note-taking',
+        typography: 'Typography & Layout',
+        code: 'Code & Development',
+        security: 'Security & Privacy',
+        services: 'Services & Tools',
+        photo: 'Photo Viewing',
+        languages: 'Languages',
+        various: 'Various',
+        memories: 'Memories (Legacy apps)',
+      },
+			ru: {
+				art2d: '2D Искусство и Графика',
+				art3d: '3D Моделирование',
+				writing: 'Письмо и Заметки',
+				typography: 'Типографика и Вёрстка',
+				code: 'Код и Разработка',
+				security: 'Безопасность и Конфиденциальность',
+				services: 'Сервисы и Инструменты',
+				photo: 'Просмотр Фото',
+				languages: 'Языки',
+				various: 'Разное',
+				memories: 'Воспоминания (Устаревшие приложения)',
+			},
+    },
+  },
+  items: [
+    {
+      title: 'Affinity',
+      url: 'https://www.affinity.studio',
+      provider: { name: 'Canva', url: 'https://www.canva.com' },
+      categories: ['art2d', 'typography'],
+    },
+		{
+			title: 'Paint.NET',
+			url: 'https://www.getpaint.net/',
+			provider: { name: 'dotPDN LLC', url: 'https://www.getpaint.net/' },
+			categories: ['art2d'],
+		},
+		{
+			title: 'GIMP',
+			url: 'https://www.gimp.org/',
+			provider: { name: 'GIMP', url: 'https://www.gimp.org/' },
+			categories: ['art2d'],
+		}
+		// etc...
+		{
+			title: 'PureRef',
+			url: 'https://www.pureref.com/',
+			provider: { name: 'PureRef', url: 'https://www.pureref.com/' },
+			categories: ['various'],
+		},
+		// etc...
+		{
+			title: 'Typst',
+			url: 'https://typst.app/',
+			provider: { name: 'Typst', url: 'https://typst.app/' },
+			categories: ['typography', 'languages'],
+		}
+		// etc...
+		{
+			title: 'Blender',
+			url: 'https://www.blender.org/',
+			provider: { name: 'Blender Foundation', url: 'https://www.blender.org/foundation/' },
+			categories: ['art3d'],
+		},
+		// etc...
+		{
+			title: 'Obsidian',
+			url: 'https://obsidian.md/',
+			provider: { name: 'Obsidian', url: 'https://obsidian.md/' },
+			categories: ['writing'],
+		},
+		// etc...
+		{
+			title: 'Visual Studio Code',
+			logo: 'vscode',
+			url: 'https://code.visualstudio.com/',
+			provider: { name: 'Microsoft', url: 'https://www.microsoft.com' },
+			categories: ['code'],
+		},
+		{
+			title: 'Visual Studio',
+			logo: 'visualstudio',
+			url: 'https://visualstudio.microsoft.com/',
+			provider: { name: 'Microsoft', url: 'https://www.microsoft.com' },
+			categories: ['code'],
+		}
+		// etc...
+		{
+			title: 'FastStone Image Viewer',
+			logo: 'fsviewer',
+			url: 'https://www.faststone.org/FSViewerDetail.htm',
+			provider: { name: 'FastStone', url: 'https://www.faststone.org' },
+			categories: ['photo'],
+		},
+		{
+			title: 'FlyPhotos',
+			url: 'https://github.com/riyasy/FlyPhotos',
+			provider: { name: 'riyasy', url: 'https://github.com/riyasy' },
+			categories: ['photo'],
+		},
+		// etc...
+		{
+			title: 'KeePassXC',
+			url: 'https://keepassxc.org/',
+			provider: { name: 'KeePassXC', url: 'https://keepassxc.org/' },
+			categories: ['security'],
+		},
+		{
+			title: 'Cryptomator',
+			url: 'https://cryptomator.org/',
+			provider: { name: 'Cryptomator', url: 'https://cryptomator.org/' },
+			categories: ['security'],
+		},
+		{
+			title: 'gpg4win',
+			url: 'https://www.gpg4win.org/',
+			provider: { name: 'gpg4win', url: 'https://www.gpg4win.org/' },
+			categories: ['security'],
+		},
+		{
+			title: 'Malwarebytes',
+			url: 'https://www.malwarebytes.com/',
+			provider: { name: 'Malwarebytes', url: 'https://www.malwarebytes.com/' },
+			categories: ['security'],
+		},
+		// etc...
+		{
+			title: 'Firefox',
+			url: 'https://www.mozilla.org/en-US/firefox/new/',
+			provider: { name: 'Mozilla', url: 'https://www.mozilla.org' },
+			categories: ['various'],
+		},
+		{
+			title: 'Thunderbird',
+			url: 'https://www.mozilla.org/en-US/thunderbird/',
+			provider: { name: 'Mozilla', url: 'https://www.mozilla.org' },
+			categories: ['various'],
+		},
+		{
+			title: 'Microsoft PowerToys',
+			url: 'https://aka.ms/powertoys',
+			provider: { name: 'Microsoft', url: 'https://www.microsoft.com' },
+			categories: ['various'],
+		},
+		{
+			title: 'ShareX',
+			url: 'https://getsharex.com/',
+			provider: { name: 'ShareX', url: 'https://getsharex.com/' },
+			categories: ['various'],
+		},
+		{
+			title: 'IrfanView',
+			url: 'https://www.irfanview.com/',
+			provider: { name: 'IrfanView', url: 'https://www.irfanview.com/' },
+			categories: ['various'],
+		},
+		{
+			title: 'QTTabBar',
+			url: 'https://qttabbar.wikidot.com/',
+			provider: { name: 'QTTabBar', url: 'https://qttabbar.wikidot.com/' },
+			categories: ['various'],
+		},
+		{
+			title: 'AkelPad',
+			url: 'https://akelpad.sourceforge.io/',
+			provider: { name: 'AkelPad', url: 'https://akelpad.sourceforge.io/' },
+			categories: ['various'],
+		},
+		{
+			title: 'Everything',
+			url: 'https://www.voidtools.com/',
+			provider: { name: 'Voidtools', url: 'https://www.voidtools.com/' },
+			categories: ['various'],
+		},
+		{
+			title: 'Listary',
+			url: 'https://www.listary.com/',
+			provider: { name: 'Listary', url: 'https://www.listary.com/' },
+			categories: ['various'],
+		},
+		// etc...
+		{
+			title: 'Google Picasa',
+			logo: 'picasa',
+			url: 'https://archive.org/details/picasa-3.9.141.259',
+			provider: { name: 'Google', url: 'https://www.google.com' },
+			categories: ['memories'],
+		}
+  ],
+}
