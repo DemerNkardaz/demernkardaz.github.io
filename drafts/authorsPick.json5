@@ -133,6 +133,14 @@
 		},
 		// etc...
 		{
+			title: 'Spotify',
+			url: 'https://www.spotify.com/',
+			provider: { name: 'Spotify', url: 'https://www.spotify.com/' },
+			categories: ['services'],
+		},
+		// etc...
+		// etc...
+		{
 			title: 'Firefox',
 			url: 'https://www.mozilla.org/en-US/firefox/new/',
 			provider: { name: 'Mozilla', url: 'https://www.mozilla.org' },
