@@ -1,0 +1,660 @@
+{
+  "codingActivity": {
+    "data": {
+      "best_day": {
+        "date": "2025-07-01",
+        "text": "20 hrs 18 mins",
+        "total_seconds": 73125.258617
+      },
+      "grand_total": {
+        "daily_average": 14393,
+        "daily_average_including_other_language": 14895,
+        "human_readable_daily_average": "3 hrs 59 mins",
+        "human_readable_total": "2,003 hrs 1 min",
+        "total_seconds": 7210913.0117,
+        "total_seconds_including_other_language": 7462505.252406,
+        "human_readable_daily_average_including_other_language": "4 hrs 8 mins",
+        "human_readable_total_including_other_language": "2,072 hrs 55 mins"
+      },
+      "range": {
+        "start": "2024-09-03T21:00:00Z",
+        "end": "2026-09-05T20:59:59Z",
+        "range": "all_time",
+        "days_including_holidays": 732,
+        "days_minus_holidays": 501,
+        "holidays": 231
+      }
+    }
+  },
+  "languages": {
+    "data": [
+      {
+        "name": "AutoHotkey",
+        "color": "#6594b9",
+        "percent": 49.26,
+        "text": "1,021 hrs 11 mins",
+        "hours": 1021,
+        "minutes": 11,
+        "total_seconds": 3676298.238709,
+        "decimal": "1021.18",
+        "digital": "1021:11"
+      },
+      {
+        "name": "JSON",
+        "color": "#292929",
+        "percent": 8.3,
+        "text": "171 hrs 58 mins",
+        "hours": 171,
+        "minutes": 58,
+        "total_seconds": 619124.221634,
+        "decimal": "171.97",
+        "digital": "171:58"
+      },
+      {
+        "name": "Markdown",
+        "color": "#083fa1",
+        "percent": 6.73,
+        "text": "139 hrs 35 mins",
+        "hours": 139,
+        "minutes": 35,
+        "total_seconds": 502501.157336,
+        "decimal": "139.58",
+        "digital": "139:35"
+      },
+      {
+        "name": "TypeScript",
+        "color": "#3178c6",
+        "percent": 5.29,
+        "text": "109 hrs 36 mins",
+        "hours": 109,
+        "minutes": 36,
+        "total_seconds": 394595.24393,
+        "decimal": "109.60",
+        "digital": "109:36"
+      },
+      {
+        "name": "Rust",
+        "color": "#dea584",
+        "percent": 4.8,
+        "text": "99 hrs 26 mins",
+        "hours": 99,
+        "minutes": 26,
+        "total_seconds": 357985.75,
+        "decimal": "99.43",
+        "digital": "99:26"
+      },
+      {
+        "name": "INI",
+        "color": "#d1dbe0",
+        "percent": 3.87,
+        "text": "80 hrs 9 mins",
+        "hours": 80,
+        "minutes": 9,
+        "total_seconds": 288554.170912,
+        "decimal": "80.15",
+        "digital": "80:09"
+      },
+      {
+        "name": "Other",
+        "color": "#16ce40",
+        "percent": 3.37,
+        "text": "69 hrs 53 mins",
+        "hours": 69,
+        "minutes": 53,
+        "total_seconds": 251592.240706,
+        "decimal": "69.88",
+        "digital": "69:53"
+      },
+      {
+        "name": "Vue",
+        "color": "#41b883",
+        "percent": 2.64,
+        "text": "54 hrs 48 mins",
+        "hours": 54,
+        "minutes": 48,
+        "total_seconds": 197281.069,
+        "decimal": "54.80",
+        "digital": "54:48"
+      },
+      {
+        "name": "JavaScript",
+        "color": "#f1e05a",
+        "percent": 2.13,
+        "text": "44 hrs 7 mins",
+        "hours": 44,
+        "minutes": 7,
+        "total_seconds": 158832.914665,
+        "decimal": "44.12",
+        "digital": "44:07"
+      },
+      {
+        "name": "Typst",
+        "color": "#239dad",
+        "percent": 2.04,
+        "text": "42 hrs 14 mins",
+        "hours": 42,
+        "minutes": 14,
+        "total_seconds": 152042.127,
+        "decimal": "42.23",
+        "digital": "42:14"
+      },
+      {
+        "name": "SCSS",
+        "color": "#c6538c",
+        "percent": 1.41,
+        "text": "29 hrs 8 mins",
+        "hours": 29,
+        "minutes": 8,
+        "total_seconds": 104907.284387,
+        "decimal": "29.13",
+        "digital": "29:08"
+      },
+      {
+        "name": "CSS",
+        "color": "#663399",
+        "percent": 1.29,
+        "text": "26 hrs 39 mins",
+        "hours": 26,
+        "minutes": 39,
+        "total_seconds": 95990.87846,
+        "decimal": "26.65",
+        "digital": "26:39"
+      },
+      {
+        "name": "YAML",
+        "color": "#cb171e",
+        "percent": 1.17,
+        "text": "24 hrs 12 mins",
+        "hours": 24,
+        "minutes": 12,
+        "total_seconds": 87166.207179,
+        "decimal": "24.20",
+        "digital": "24:12"
+      },
+      {
+        "name": "Python",
+        "color": "#3572A5",
+        "percent": 1.05,
+        "text": "21 hrs 45 mins",
+        "hours": 21,
+        "minutes": 45,
+        "total_seconds": 78309.166852,
+        "decimal": "21.75",
+        "digital": "21:45"
+      },
+      {
+        "name": "Lua",
+        "color": "#000080",
+        "percent": 1.03,
+        "text": "21 hrs 22 mins",
+        "hours": 21,
+        "minutes": 22,
+        "total_seconds": 76952.02795,
+        "decimal": "21.37",
+        "digital": "21:22"
+      },
+      {
+        "name": "HTML",
+        "color": "#e34c26",
+        "percent": 0.95,
+        "text": "19 hrs 39 mins",
+        "hours": 19,
+        "minutes": 39,
+        "total_seconds": 70789.831255,
+        "decimal": "19.65",
+        "digital": "19:39"
+      },
+      {
+        "name": "TOML",
+        "color": "#9c4221",
+        "percent": 0.93,
+        "text": "19 hrs 20 mins",
+        "hours": 19,
+        "minutes": 20,
+        "total_seconds": 69633.052,
+        "decimal": "19.33",
+        "digital": "19:20"
+      },
+      {
+        "name": "PowerShell",
+        "color": "#012456",
+        "percent": 0.78,
+        "text": "16 hrs 14 mins",
+        "hours": 16,
+        "minutes": 14,
+        "total_seconds": 58490.704522,
+        "decimal": "16.23",
+        "digital": "16:14"
+      },
+      {
+        "name": "Blender",
+        "color": "#dc9658",
+        "percent": 0.52,
+        "text": "10 hrs 44 mins",
+        "hours": 10,
+        "minutes": 44,
+        "total_seconds": 38686.416319,
+        "decimal": "10.73",
+        "digital": "10:44"
+      },
+      {
+        "name": "MDX",
+        "color": "#fcb32c",
+        "percent": 0.51,
+        "text": "10 hrs 29 mins",
+        "hours": 10,
+        "minutes": 29,
+        "total_seconds": 37771.96728,
+        "decimal": "10.48",
+        "digital": "10:29"
+      },
+      {
+        "name": "C#",
+        "color": "#178600",
+        "percent": 0.38,
+        "text": "7 hrs 51 mins",
+        "hours": 7,
+        "minutes": 51,
+        "total_seconds": 28317.56683,
+        "decimal": "7.85",
+        "digital": "7:51"
+      },
+      {
+        "name": "Text",
+        "color": "#d62728",
+        "percent": 0.31,
+        "text": "6 hrs 20 mins",
+        "hours": 6,
+        "minutes": 20,
+        "total_seconds": 22813.873929,
+        "decimal": "6.33",
+        "digital": "6:20"
+      },
+      {
+        "name": "C++",
+        "color": "#f34b7d",
+        "percent": 0.29,
+        "text": "6 hrs 1 min",
+        "hours": 6,
+        "minutes": 1,
+        "total_seconds": 21699.931002,
+        "decimal": "6.02",
+        "digital": "6:01"
+      },
+      {
+        "name": "Git",
+        "color": "#9467bd",
+        "percent": 0.19,
+        "text": "3 hrs 58 mins",
+        "hours": 3,
+        "minutes": 58,
+        "total_seconds": 14288.313594,
+        "decimal": "3.97",
+        "digital": "3:58"
+      },
+      {
+        "name": "Git Config",
+        "color": "#F44D27",
+        "percent": 0.18,
+        "text": "3 hrs 39 mins",
+        "hours": 3,
+        "minutes": 39,
+        "total_seconds": 13182.085309,
+        "decimal": "3.65",
+        "digital": "3:39"
+      },
+      {
+        "name": "Batchfile",
+        "color": "#C1F12E",
+        "percent": 0.13,
+        "text": "2 hrs 47 mins",
+        "hours": 2,
+        "minutes": 47,
+        "total_seconds": 10055.002285,
+        "decimal": "2.78",
+        "digital": "2:47"
+      },
+      {
+        "name": "XAML",
+        "color": "#8c564b",
+        "percent": 0.08,
+        "text": "1 hr 43 mins",
+        "hours": 1,
+        "minutes": 43,
+        "total_seconds": 6203.37,
+        "decimal": "1.72",
+        "digital": "1:43"
+      },
+      {
+        "name": "JSON5",
+        "color": "#267CB9",
+        "percent": 0.08,
+        "text": "1 hr 40 mins",
+        "hours": 1,
+        "minutes": 40,
+        "total_seconds": 6048.71,
+        "decimal": "1.67",
+        "digital": "1:40"
+      },
+      {
+        "name": "XML",
+        "color": "#0060ac",
+        "percent": 0.06,
+        "text": "1 hr 17 mins",
+        "hours": 1,
+        "minutes": 17,
+        "total_seconds": 4663.073318,
+        "decimal": "1.28",
+        "digital": "1:17"
+      },
+      {
+        "name": "TSConfig",
+        "color": "#aec7e8",
+        "percent": 0.04,
+        "text": "48 mins",
+        "hours": 0,
+        "minutes": 48,
+        "total_seconds": 2898.42,
+        "decimal": "0.80",
+        "digital": "0:48"
+      },
+      {
+        "name": "Makefile",
+        "color": "#427819",
+        "percent": 0.04,
+        "text": "45 mins",
+        "hours": 0,
+        "minutes": 45,
+        "total_seconds": 2710.946,
+        "decimal": "0.75",
+        "digital": "0:45"
+      },
+      {
+        "name": "VBScript",
+        "color": "#15dcdc",
+        "percent": 0.03,
+        "text": "34 mins",
+        "hours": 0,
+        "minutes": 34,
+        "total_seconds": 2045.557,
+        "decimal": "0.57",
+        "digital": "0:34"
+      },
+      {
+        "name": "Kusto",
+        "color": "#e377c2",
+        "percent": 0.02,
+        "text": "28 mins",
+        "hours": 0,
+        "minutes": 28,
+        "total_seconds": 1704.308,
+        "decimal": "0.47",
+        "digital": "0:28"
+      },
+      {
+        "name": "Vue.js",
+        "color": "#f7b6d2",
+        "percent": 0.02,
+        "text": "27 mins",
+        "hours": 0,
+        "minutes": 27,
+        "total_seconds": 1675.15,
+        "decimal": "0.45",
+        "digital": "0:27"
+      },
+      {
+        "name": "Bash",
+        "color": "#7f7f7f",
+        "percent": 0.02,
+        "text": "27 mins",
+        "hours": 0,
+        "minutes": 27,
+        "total_seconds": 1660.643708,
+        "decimal": "0.45",
+        "digital": "0:27"
+      },
+      {
+        "name": "EJS",
+        "color": "#a91e50",
+        "percent": 0.01,
+        "text": "16 mins",
+        "hours": 0,
+        "minutes": 16,
+        "total_seconds": 988.533828,
+        "decimal": "0.27",
+        "digital": "0:16"
+      },
+      {
+        "name": "reg",
+        "color": "#c7c7c7",
+        "percent": 0.01,
+        "text": "14 mins",
+        "hours": 0,
+        "minutes": 14,
+        "total_seconds": 866.606,
+        "decimal": "0.23",
+        "digital": "0:14"
+      },
+      {
+        "name": "XML Property List",
+        "color": "#0060ac",
+        "percent": 0.01,
+        "text": "13 mins",
+        "hours": 0,
+        "minutes": 13,
+        "total_seconds": 808.47,
+        "decimal": "0.22",
+        "digital": "0:13"
+      },
+      {
+        "name": "TSV",
+        "color": "#237346",
+        "percent": 0.01,
+        "text": "10 mins",
+        "hours": 0,
+        "minutes": 10,
+        "total_seconds": 603.571,
+        "decimal": "0.17",
+        "digital": "0:10"
+      },
+      {
+        "name": "C",
+        "color": "#555555",
+        "percent": 0,
+        "text": "5 mins",
+        "hours": 0,
+        "minutes": 5,
+        "total_seconds": 319.865898,
+        "decimal": "0.08",
+        "digital": "0:05"
+      },
+      {
+        "name": "Image (svg)",
+        "color": "#bcbd22",
+        "percent": 0,
+        "text": "4 mins",
+        "hours": 0,
+        "minutes": 4,
+        "total_seconds": 290.107769,
+        "decimal": "0.07",
+        "digital": "0:04"
+      },
+      {
+        "name": "Java",
+        "color": "#b07219",
+        "percent": 0,
+        "text": "4 mins",
+        "hours": 0,
+        "minutes": 4,
+        "total_seconds": 273.509,
+        "decimal": "0.07",
+        "digital": "0:04"
+      },
+      {
+        "name": "CSV",
+        "color": "#237346",
+        "percent": 0,
+        "text": "2 mins",
+        "hours": 0,
+        "minutes": 2,
+        "total_seconds": 161.687,
+        "decimal": "0.03",
+        "digital": "0:02"
+      },
+      {
+        "name": "BlitzBasic",
+        "color": "#00FFAE",
+        "percent": 0,
+        "text": "2 mins",
+        "hours": 0,
+        "minutes": 2,
+        "total_seconds": 159.645,
+        "decimal": "0.03",
+        "digital": "0:02"
+      },
+      {
+        "name": "Svelte",
+        "color": "#ff3e00",
+        "percent": 0,
+        "text": "2 mins",
+        "hours": 0,
+        "minutes": 2,
+        "total_seconds": 144.611,
+        "decimal": "0.03",
+        "digital": "0:02"
+      },
+      {
+        "name": "BibTeX",
+        "color": "#778899",
+        "percent": 0,
+        "text": "1 min",
+        "hours": 0,
+        "minutes": 1,
+        "total_seconds": 87.019,
+        "decimal": "0.02",
+        "digital": "0:01"
+      },
+      {
+        "name": "Erlang",
+        "color": "#B83998",
+        "percent": 0,
+        "text": "1 min",
+        "hours": 0,
+        "minutes": 1,
+        "total_seconds": 77.657,
+        "decimal": "0.02",
+        "digital": "0:01"
+      },
+      {
+        "name": "Microsoft Visual Studio Solution",
+        "color": "#dbdb8d",
+        "percent": 0,
+        "text": "1 min",
+        "hours": 0,
+        "minutes": 1,
+        "total_seconds": 69.795586,
+        "decimal": "0.02",
+        "digital": "0:01"
+      },
+      {
+        "name": "Image",
+        "color": "#17becf",
+        "percent": 0,
+        "text": "1 min",
+        "hours": 0,
+        "minutes": 1,
+        "total_seconds": 63.194646,
+        "decimal": "0.02",
+        "digital": "0:01"
+      },
+      {
+        "name": "Ruby",
+        "color": "#701516",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 30.002,
+        "decimal": "0.00",
+        "digital": "0:00"
+      },
+      {
+        "name": "Elixir",
+        "color": "#6e4a7e",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 29.005,
+        "decimal": "0.00",
+        "digital": "0:00"
+      },
+      {
+        "name": "Go",
+        "color": "#00ADD8",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 23.594,
+        "decimal": "0.00",
+        "digital": "0:00"
+      },
+      {
+        "name": "Common Lisp",
+        "color": "#3fb68b",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 19.102,
+        "decimal": "0.00",
+        "digital": "0:00"
+      },
+      {
+        "name": "PHP",
+        "color": "#4F5D95",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 9.489,
+        "decimal": "0.00",
+        "digital": "0:00"
+      },
+      {
+        "name": "Nginx configuration file",
+        "color": "#9edae5",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 4.907608,
+        "decimal": "0.00",
+        "digital": "0:00"
+      },
+      {
+        "name": "D",
+        "color": "#ba595e",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 2.753,
+        "decimal": "0.00",
+        "digital": "0:00"
+      },
+      {
+        "name": "Type Language",
+        "color": "#ffbb78",
+        "percent": 0,
+        "text": "0 secs",
+        "hours": 0,
+        "minutes": 0,
+        "total_seconds": 0.793,
+        "decimal": "0.00",
+        "digital": "0:00"
+      }
+    ]
+  }
+}

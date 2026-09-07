@@ -1,0 +1,222 @@
+{
+  "objects": [
+    {
+      "package": {
+        "name": "@nkardaz/typography-core",
+        "version": "1.0.3",
+        "description": "Common core for @nkardaz typography plugins",
+        "date": "2026-06-18T12:25:35.780Z",
+        "keywords": [
+          "typography",
+          "typographic",
+          "text-formatting",
+          "typesetting",
+          "english",
+          "russian",
+          "text"
+        ],
+        "sanitized_name": "@nkardaz/typography-core",
+        "publisher": {
+          "email": "dev_nkardaz@proton.me",
+          "username": "nkardaz"
+        },
+        "maintainers": [
+          {
+            "email": "dev_nkardaz@proton.me",
+            "username": "nkardaz"
+          }
+        ],
+        "license": "MIT",
+        "links": {
+          "homepage": "https://github.com/DemerNkardaz/typography-core#readme",
+          "repository": "git+https://github.com/DemerNkardaz/typography-core.git",
+          "bugs": "https://github.com/DemerNkardaz/typography-core/issues",
+          "npm": "https://www.npmjs.com/package/@nkardaz/typography-core"
+        }
+      },
+      "downloads": {
+        "monthly": 30,
+        "weekly": 5
+      },
+      "score": {
+        "final": 17.233791,
+        "detail": {
+          "popularity": 1,
+          "quality": 1,
+          "maintenance": 1
+        }
+      },
+      "dependents": "1",
+      "updated": "2026-09-03T13:21:13.178Z",
+      "searchScore": 17.233791,
+      "flags": {
+        "insecure": 0
+      }
+    },
+    {
+      "package": {
+        "name": "@nkardaz/typography-rules",
+        "version": "1.0.4",
+        "description": "Rules package to be used in typography plugins. Glyphs library and helpers included.",
+        "date": "2026-06-24T15:41:32.060Z",
+        "keywords": [
+          "typography",
+          "typographic",
+          "text-formatting",
+          "typesetting",
+          "russian",
+          "english",
+          "text"
+        ],
+        "sanitized_name": "@nkardaz/typography-rules",
+        "publisher": {
+          "email": "dev_nkardaz@proton.me",
+          "username": "nkardaz"
+        },
+        "maintainers": [
+          {
+            "email": "dev_nkardaz@proton.me",
+            "username": "nkardaz"
+          }
+        ],
+        "license": "MIT",
+        "links": {
+          "homepage": "https://github.com/DemerNkardaz/typography-rules#readme",
+          "repository": "git+https://github.com/DemerNkardaz/typography-rules.git",
+          "bugs": "https://github.com/DemerNkardaz/typography-rules/issues",
+          "npm": "https://www.npmjs.com/package/@nkardaz/typography-rules"
+        }
+      },
+      "downloads": {
+        "monthly": 19,
+        "weekly": 4
+      },
+      "score": {
+        "final": 14.6156225,
+        "detail": {
+          "popularity": 1,
+          "quality": 1,
+          "maintenance": 1
+        }
+      },
+      "dependents": "2",
+      "updated": "2026-09-02T16:31:14.090Z",
+      "searchScore": 14.6156225,
+      "flags": {
+        "insecure": 0
+      }
+    },
+    {
+      "package": {
+        "name": "@nkardaz/remark-typography",
+        "version": "1.0.3",
+        "description": "Implements typography rules for MDX files.",
+        "date": "2026-06-18T12:27:46.395Z",
+        "keywords": [
+          "typography",
+          "typographic",
+          "text-formatting",
+          "typesetting",
+          "russian",
+          "english",
+          "text",
+          "mdast",
+          "markdown",
+          "unified",
+          "remark",
+          "remark-plugin"
+        ],
+        "sanitized_name": "@nkardaz/remark-typography",
+        "publisher": {
+          "email": "dev_nkardaz@proton.me",
+          "username": "nkardaz"
+        },
+        "maintainers": [
+          {
+            "email": "dev_nkardaz@proton.me",
+            "username": "nkardaz"
+          }
+        ],
+        "license": "MIT",
+        "links": {
+          "homepage": "https://github.com/DemerNkardaz/remark-typography#readme",
+          "repository": "git+https://github.com/DemerNkardaz/remark-typography.git",
+          "bugs": "https://github.com/DemerNkardaz/remark-typography/issues",
+          "npm": "https://www.npmjs.com/package/@nkardaz/remark-typography"
+        }
+      },
+      "downloads": {
+        "monthly": 19,
+        "weekly": 4
+      },
+      "score": {
+        "final": 14.559402,
+        "detail": {
+          "popularity": 1,
+          "quality": 1,
+          "maintenance": 1
+        }
+      },
+      "dependents": 0,
+      "updated": "2026-09-03T13:21:12.747Z",
+      "searchScore": 14.559402,
+      "flags": {
+        "insecure": 0
+      }
+    },
+    {
+      "package": {
+        "name": "@nkardaz/vite-plugin-css-scss-tokens",
+        "version": "1.0.1",
+        "description": "Vite plugin that generates SCSS token variables from CSS custom properties",
+        "date": "2026-06-18T06:36:59.752Z",
+        "keywords": [
+          "vite",
+          "plugin",
+          "css",
+          "scss",
+          "tokens",
+          "css-variables"
+        ],
+        "sanitized_name": "@nkardaz/vite-plugin-css-scss-tokens",
+        "publisher": {
+          "email": "demer.nkardaz@gmail.com",
+          "username": "nkardaz"
+        },
+        "maintainers": [
+          {
+            "email": "demer.nkardaz@gmail.com",
+            "username": "nkardaz"
+          }
+        ],
+        "license": "MIT",
+        "links": {
+          "homepage": "https://github.com/DemerNkardaz/vite-plugin-css-scss-tokens#readme",
+          "repository": "git+https://github.com/DemerNkardaz/vite-plugin-css-scss-tokens.git",
+          "bugs": "https://github.com/DemerNkardaz/vite-plugin-css-scss-tokens/issues",
+          "npm": "https://www.npmjs.com/package/@nkardaz/vite-plugin-css-scss-tokens"
+        }
+      },
+      "downloads": {
+        "monthly": 14,
+        "weekly": 5
+      },
+      "score": {
+        "final": 12.875626,
+        "detail": {
+          "popularity": 1,
+          "quality": 1,
+          "maintenance": 1
+        }
+      },
+      "dependents": 0,
+      "updated": "2026-09-03T07:31:12.048Z",
+      "searchScore": 12.875626,
+      "flags": {
+        "insecure": 0
+      }
+    }
+  ],
+  "total": 4,
+  "time": "2026-09-07T01:31:09.529Z"
+}
